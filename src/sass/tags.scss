@@ -1,0 +1,91 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  color: #000;
+  font-family: "Open Sans";
+  font-weight: normal;
+}
+
+body {
+  line-height: 1.42;
+}
+
+a {
+  transition: 300ms;
+	text-decoration: none;
+  color: #419df4;
+  &:hover, &:focus {
+    color: #000;
+  }
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+input[type="checkbox"]:required {
+	display: none;
+}
+input[type="checkbox"]:required:invalid + label::before {
+	content: "\2610";
+	display: block;
+  width: 17.1px;
+  height: 19px;
+	border: solid 1px #000;
+	background-color: transparent;
+	color: transparent;
+	margin-right: 10px;
+	@include tablets {
+		border-color: #000;
+	}
+	@include phones {
+    margin-bottom: 8px;
+		width: 13px;
+		height: 13px;
+		flex: none;
+	}
+}
+input[type="checkbox"]:required:valid + label::before {
+	content: "\2713";
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  width: 17.1px;
+  height: 19px;
+	border: solid 1px #000;
+	background-color: #fff;
+	font-size: 14px;
+	margin-right: 10px;
+	color: #4CAF50;
+	@include phones {
+		margin-bottom: 8px;
+		width: 13px;
+		height: 13px;
+		flex: none;
+		font-size: 10px;
+	}
+}
+
+button {
+	cursor: pointer;
+}

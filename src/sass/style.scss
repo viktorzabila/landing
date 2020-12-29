@@ -1,0 +1,76 @@
+@import "./misc.scss";
+
+@font-face {
+    font-family: 'BasisGrotesquePro';
+    src: url('../fonts/BasisGrotesquePro-Regular.woff2') format('woff2'),
+        url('../fonts/BasisGrotesquePro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BasisGrotesquePro';
+    src: url('../fonts/BasisGrotesquePro-Light.woff2') format('woff2'),
+        url('../fonts/BasisGrotesquePro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BasisGrotesquePro';
+    src: url('../fonts/BasisGrotesquePro-Bold.woff2') format('woff2'),
+        url('../fonts/BasisGrotesquePro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.button {
+  width: 310px;
+  padding: 11px 0px;
+	border: solid 2px #af9744;
+	font-size: 16px;
+	font-weight: 300;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: 0.19px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	width: 1368px;
+	margin: 0 auto;
+	padding: 0 15px;
+	&_relative {
+		position: relative;
+	}
+	&_flex {
+		display: flex;
+	}
+	@include laptops {
+		min-width: 800px;
+		width: auto;
+		margin: 0 auto;
+		padding: 0px 30px;
+	}
+
+	@include tablets {
+		min-width: 440px;
+		margin: 0 auto;
+		padding: 0px 20px;
+	}
+
+	@include phones {
+		min-width: 300px;
+		margin: 0 auto;
+		padding: 0px 10px;
+	}
+}

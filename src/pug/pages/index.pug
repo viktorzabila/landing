@@ -1,0 +1,82 @@
+extends ../templates/common.pug
+block variables
+	- var title = "Home";
+block inner
+			.header-wrapper
+				.container
+					.header
+						.header__logo
+						a(href="#").button.btn.header__button BESTILL VERDIVURDERING
+			.header-main
+				.header-main__title Haukedalsbrotet  96
+				.header-main__subtitle  5114 Tertnes
+				.header-main__text SOLGT
+				.header-main__subtext i ditt nærområde
+				.info
+					.info__title Vi hjelper deg med boligsalget
+					.info-text
+						.info__text Det er mye å huske på når du skal selge boligen din. Men du er i trygge hender med oss i Eiendomsmegler Vest. 
+						.info__subtext Stian solgte akkurat denne boligen i ditt nærområde, og har flere interessenter på listen. Vi kjenner ditt nabolag og boligprisene lokalt, og hjelper deg og finne kjøperne og gi deg en god pris på boligsalget ditt.
+					a(href="#").btn.info__main BESTILL VERDIVURDERING
+			.wrap
+				.main
+					.main__image
+					.main__title Folk velger meglere som kjenner nabolaget
+				.description
+					.description-img
+					.description-text
+						.description-text__title Stian Sjøstrand Hansen
+						.description-text__subtitle Eiendomsmegler
+						.description-text__text - Fornøyde kunder er det som motiverer meg og det er nettopp derfor jeg nå er blant de mestselgende eiendomsmeglerne i Åsane. For meg er det viktig at du føler deg godt ivaretatt gjennom hele prosessen og at vi sitter igjen med følelsen av at maksimal salgspris er oppnådd.
+						.description-text__item
+							a(href="tel:+6494461709").description-text-item__number 476 88 875
+							a(href="mailto: abc@example.com").description-text-item__email stian.hansen@emvest.no
+			.info__second
+				.info__second__title Veien til et vellykket boligsalg starter hos oss
+				.info__second__text I jakten på drømmeboligen bør du alltid staret med å invitere hjem en megler for en verdivurdering. Megler kommer hjem til deg på befaring og tar en grunding gjennomgang av boligen tomten og nærområdet.
+				a(href="#").info__second__button BESTILL VERDIIVURDERING
+			.menu
+				.city
+				.container
+					.menu__title Dette får du:
+					.menu__text
+						ul.menu__text__list
+							li.menu__text-list__item 
+								<i class="fa fa-check" (aria-hidden="true" style="color:#b20012"></i>
+								.menu__text-list__item-text Gjennomgang av hvordan boligsalget gjennomføres
+							li.menu__text-list__item 
+								<i class="fa fa-check" (aria-hidden="true" style="color:#b20012"></i>
+								.menu__text-list__item-text Tidsplan for annonsering og visning
+							li.menu__text-list__item 
+								<i class="fa fa-check" aria-hidden="true" style="color:#b20012"></i>
+								.menu__text-list__item-text Strategi for salget
+							li.menu__text-list__item 
+								<i class="fa fa-check" aria-hidden="true" style="color:#b20012"></i>
+								.menu__text-list__item-text Tips og råd på hva som kan gjøres med oppussing og møblering slik at du får den beste presentasjonen av boligen
+			.footer-wrapper
+				.container
+					.footer
+						.footer__text Eiendomsmegler Vest ble etablert som egen eiendomsavdeling i Sparebanken Vest i 1974. Vi har i dag salgskontorer i de største byene og nærområdene på Vestlandet. På de fleste av våre salgskontorer er vi samlokalisert med bankrådgivere fra Sparebanken Vest.	
+						.footer__logo
+			.footer-wrap 		
+				form(method="POST" action="https://peaceful-island-78575.herokuapp.com/api").footer-form
+						.footer-form__top
+							.footer-form__phone-text Få verdivurdering av din bolig
+							input.footer-form__top__plch(type="name" name="name" required placeholder="Navn")/
+							input.footer-form__top__plch(type="phone" name="phone" required placeholder="Telefonnummer")/
+							input.footer-form__top__plch(type="email" name="email" required placeholder="Postnummer")/ 
+							button(type="submit")#formSubmit.btn.btn-footer-form__button BESTILL VERDIVURDERING
+						.footer-form__bottom
+							ul.footer-form__bottom__list 
+								li.footer-form__bottom__text 
+									.checkbox-wrap
+										input(id="field_terms" type="checkbox" required name="terms")/
+										label(for="field_terms").checkbox-wrap__text Jeg godkjenner at dere kan kontakte meg for en uforpliktende verdivurdering.
+									//- <input type="checkbox" name="option1" value="a1" id="check" >
+									//- label(for="check") Jeg godkjenner at dere kan kontakte meg for en uforpliktende verdivurdering.
+								button(type="submit")#formSubmit.btn.btn-footer-form__phone BESTILL VERDIIVURDERING
+						.footer__phone
+							.footer__phone-form-text Eiendomsmegler Vest ble etablert som egen eiendomsavdeling i Sparebanken Vest i 1974. Vi har i dag salgskontorer i de største byene og nærområdene på Vestlandet. På de fleste av våre salgskontorer er vi samlokalisert med bankrådgivere fra Sparebanken Vest.		
+							hr.footer__phone__hr
+							.footer__phone-logo
+			
